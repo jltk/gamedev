@@ -1,6 +1,6 @@
 # Game Development Notes
 
-📄 Notes for game development focusing on free and open source solutions. Last updated on **26th August 2018**.
+📄 Notes for game development focusing on free and open source solutions. Last updated on **4th Sept. 2018**.
 
 ### Table of contents
 
