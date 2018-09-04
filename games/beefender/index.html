@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beefender #minibeansjam</title>
+    <style>
+        body, html {
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            background: #141D26;
+            color: white;
+        }
+        body, h1 {
+            padding: 0;
+            margin: 12px 0 0 0;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        canvas {
+            margin: 16px auto;
+            display: block;
+            width: 800px;
+            padding: 0;
+            image-rendering: optimizeSpeed;
+            image-rendering: -moz-crisp-edges;
+            box-shadow: 0px 5px 20px black;
+        }
+        a:link, a:visited {
+            color: #7999A6;
+        }
+    </style>
+    <script src="phaser.min.js"></script>
+</head>
+<body>
+    <h1>Beefender</h1>
+    <a href="https://gamejolt.com/games/beefender/340866">on gamejolt.com</a>
+    <div class="game">
+    <script>
+    var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+
+    function preload ()
+    {
+        game.load.image('background', 'assets/bg.png');
+        game.load.image('thorne', 'assets/thorne.png');
+        game.load.image('menu', 'assets/menu.png');
+        game.load.image('win', 'assets/win.png');
+        game.load.image('lose', 'assets/lose.png');
+        game.load.spritesheet('hornet', 'assets/hornet.png', 200, 200);
+        game.load.spritesheet('bee', 'assets/bee.png', 100, 100);
+        game.load.audio('shotsfx', 'assets/shot.ogg');
+        game.load.audio('enemyfx', 'assets/hitenemy.ogg');
+        game.load.audio('playerfx', 'assets/hitplayer.ogg');
+        game.load.audio('music', 'assets/music.ogg');
+        game.load.bitmapFont('scoreFont', 'assets/nokia.png', 'assets/nokia.xml');
+    }
+
+    var player;
+    var weapon;
+    var spawnAllowed = true;
+    var enemy;
+    var score = 0;
+    var scoreString = '';
+    var scoreText;
+    var hornets;
+
+    function create () {
+        // base
+        Phaser.Canvas.setImageRenderingCrisp(game.canvas);
+        game.physics.startSystem(Phaser.Physics.ARCADE);
+        game.add.image(0, 0, 'background');
+
+        // bee
+        player = game.add.sprite(340, 240, 'bee');
+        
+        game.physics.arcade.enable(player, Phaser.Physics.ARCADE);
+        //player.smoothed = false;
+        player.body.collideWorldBounds = true;
+        player.body.setSize(30, 60, 35, 15);
+
+        // bee animations
+        player.animations.add('left', [8, 9], 10, true);
+        player.animations.add('right', [2, 3], 10, true);
+        player.animations.add('up', [12, 13], 10, true);
+        player.animations.add('down', [6, 7], 10, true);
+        player.animations.add('leftW', [0, 1], 10, true);
+        player.animations.play('right');
+        // bee animations without thorne
+        
+
+        // weapon thorne
+        weapon = game.add.weapon(1, 'thorne');
+        weapon.bulletSpeed = 600;
+        //weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
+        weapon.fireAngle = Phaser.ANGLE_RIGHT;
+        weapon.trackSprite(player, 85, 65, false);
+        weapon.enableBody = true;
+        weapon.physicsBodyType = Phaser.Physics.ARCADE;
+        weapon.checkWorldBounds = true;
+       
+        
+        // enemy hornet
+        ranX = game.world.randomX;
+        ranY = game.world.randomY;
+        enemy = game.add.group();
+        enemy.enableBody = true;
+        enemy.physicsBodyType = Phaser.Physics.ARCADE;
+        enemy.smoothed = false;
+
+        // keyboard inputs
+        cursors = this.input.keyboard.createCursorKeys();
+        wKey = this.input.keyboard.addKey(Phaser.Keyboard.W);
+        aKey = this.input.keyboard.addKey(Phaser.Keyboard.A);
+        sKey = this.input.keyboard.addKey(Phaser.Keyboard.S);
+        dKey = this.input.keyboard.addKey(Phaser.Keyboard.D);
+        fireButton = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
+
+        // score
+        scoreString = 'Defended: ';
+        scoreText = game.add.bitmapText(10, 10, 'scoreFont', scoreString + score, 24);
+        scoreText.visible = false;
+
+        // start enemy spawn
+        game.input.onTap.addOnce(enemySpawn,this);
+
+        // start menu
+        menu = game.add.image(0, 0, 'menu');
+        menu.visible = true;
+
+        // audio
+        music = game.add.audio('music');
+        shotfx = game.add.audio('shotsfx');
+        enemyfx = game.add.audio('enemyfx');
+        playerfx = game.add.audio('playerfx');
+        music.play();
+        music.loopFull(0.6);
+
+        weapon.onFire.add(shot);
+        weapon.bullets.onWorldBounds = new Phaser.Signal();
+        weapon.bullets.onWorldBounds.add(bulletHitBounds, this);
+        
+    }
+
+    function shot() {
+        shotfx.play();
+        //weapon.checkWorldBounds = true;
+        
+    }
+
+    function bulletHitBounds(player) {
+        player.play('leftW');
+    }
+
+    function enemySpawn() {
+        game.time.events.repeat(Phaser.Timer.SECOND * 4, 8, createEnemy, this);
+        menu.visible = false;
+        scoreText.visible = true;
+    }
+
+    function createEnemy() {
+        if (player.alive) {
+            for (var i=0; i<1;i++) {
+                hornet1 = enemy.create(-420, 20 + Math.random() * 1200, 'hornet');
+                hornet2 = enemy.create(880, 120 + Math.random() * 30, 'hornet');
+                hornet3 = enemy.create(-120, 240 + Math.random() * 770, 'hornet');
+                hornet4 = enemy.create(122 + Math.random() * 120, -180, 'hornet');
+                hornet5 = enemy.create(44 + Math.random() * 44, -300, 'hornet');
+                hornet6 = enemy.create(360 + Math.random() * 566, -760, 'hornet');
+                hornet1.body.setSize(90, 140, 55, 40);
+                hornet2.body.setSize(90, 140, 55, 40);
+                hornet3.body.setSize(90, 140, 55, 40);
+                hornet4.body.setSize(90, 140, 55, 40);
+                hornet5.body.setSize(90, 140, 55, 40);
+                hornet6.body.setSize(90, 140, 55, 40);
+            }
+            hornet1.animations.add('fly', [0, 1], 10, true);
+            hornet2.animations.add('fly', [0, 1], 10, true);
+            hornet3.animations.add('fly', [0, 1], 10, true);
+            hornet4.animations.add('fly', [0, 1], 10, true);
+            hornet5.animations.add('fly', [0, 1], 10, true);
+            hornet6.animations.add('fly', [0, 1], 10, true);
+            hornet1.animations.play('fly');
+            hornet2.animations.play('fly');
+            hornet3.animations.play('fly');
+            hornet4.animations.play('fly');
+            hornet5.animations.play('fly');
+            hornet6.animations.play('fly');
+        }
+    }
+
+    function update () {
+        player.body.velocity.set(0);
+        player.bringToTop();
+        if (player.alive) {
+            if (wKey.isDown) {
+                player.body.velocity.y = -150;
+                player.body.setSize(30, 65, 30, 10);
+                player.play('up');
+                weapon.fireAngle = Phaser.ANGLE_UP;
+                weapon.trackOffset.x = 48;
+                weapon.trackOffset.y = 55;
+            } else if (aKey.isDown) {
+                player.body.velocity.x = -150;
+                player.body.setSize(30, 60, 35, 15);
+                player.play('left');
+                weapon.fireAngle = Phaser.ANGLE_LEFT;
+                weapon.trackOffset.x = 10;
+                weapon.trackOffset.y = 65;
+            } else if (sKey.isDown) {
+                player.body.velocity.y = 150;
+                player.body.setSize(30, 60, 30, 15);
+                player.play('down');
+                weapon.fireAngle = Phaser.ANGLE_DOWN;
+                weapon.trackOffset.x = 48;
+                weapon.trackOffset.y = 85;
+            } else if (dKey.isDown) {
+                player.body.velocity.x = 150;
+                player.body.setSize(30, 60, 35, 15);
+                player.play('right');
+                weapon.fireAngle = Phaser.ANGLE_RIGHT;
+                weapon.trackOffset.x = 85;
+                weapon.trackOffset.y = 65;
+            }
+
+            if (fireButton.isDown) {
+                weapon.fire();
+            }
+
+            game.physics.arcade.collide(player, enemy, collisionHeroFoe);
+            game.physics.arcade.collide(weapon.bullets, enemy, collisionBulletFoe);
+            game.physics.arcade.overlap(weapon.bullets, enemy, collisionBulletFoe);
+            enemy.forEach(moveEnemy);
+
+        }
+    }
+
+    // debug mode (uncomment render function and add ``, render: render`` to Phaser.Game)
+    function render() {
+        game.debug.physicsGroup(enemy);
+        game.debug.bodyInfo(player, 32, 32);
+        game.debug.body(player);
+        game.debug.body(player);
+        weapon.debug(32, 428)
+
+    }
+
+    function collisionHeroFoe (player, enemy) {
+        player.kill();
+        playerfx.play();
+        lose = game.add.image(0, 0, 'lose');
+        lose.visible = true;
+        game.input.onTap.addOnce(restart,this);
+        score = 0;
+        music.stop();
+    }
+
+    function collisionBulletFoe (weapon, enemy) {
+        enemy.kill();
+        weapon.kill();
+        enemyfx.play();
+        score += 1;
+        scoreText.text = scoreString + score;
+        if (score >= 48) {
+            win = game.add.image(0, 0, 'win');
+            win.visible = true;
+            game.input.onTap.addOnce(restart,this);
+            score = 0;
+        }
+    }
+
+    function moveEnemy (enemy) {
+        game.physics.arcade.moveToObject(enemy, player, false, 3*1000);
+    }
+
+    function restart() {
+        music.stop();
+        game.state.restart();
+    }
+    </script>
+    </div>
+
+</body>
+</html>
