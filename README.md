@@ -4,22 +4,20 @@
 
 ### Table of contents
 
-- [Game Development Notes](#game-development-notes)
-        - [Table of contents](#table-of-contents)
-    - [Programming](#programming)
+- [Programming](#programming)
         - [Engines](#engines)
         - [JavaScript Frameworks](#javascript-frameworks)
-    - [Graphics](#graphics)
+- [Graphics](#graphics)
         - [Pixelart](#pixelart)
         - [3D Modeling](#3d-modeling)
-    - [Audio](#audio)
+- [Audio](#audio)
         - [Music Software](#music-software)
         - [Sfx Software](#sfx-software)
         - [Sound Asset Bundles](#sound-asset-bundles)
-    - [Game Sources on GitHub](#game-sources-on-github)
-    - [Free Courses](#free-courses)
-    - [Useful links](#useful-links)
-    - [Free eBooks](#free-ebooks)
+- [Game Sources on GitHub](#game-sources-on-github)
+- [Free Courses](#free-courses)
+- [Useful links](#useful-links)
+- [Free eBooks](#free-ebooks)
 
 ---
 
