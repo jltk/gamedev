@@ -8,7 +8,7 @@
     - [Engines](#engines)
     - [JavaScript Frameworks](#javascript-frameworks)
 - [Graphics](#graphics)
-    - [Pixelart](#pixelart)
+    - [2D Drawing](#2d-drawing)
     - [3D Modeling](#3d-modeling)
 - [Audio](#audio)
     - [Music Software](#music-software)
@@ -44,7 +44,7 @@
 
 ## Graphics
 
-### Pixelart
+### 2D Drawing
 
 - [Aseprite](https://www.aseprite.org/older-versions/)
   ``Aseprite v0.9.5 is the latest version available for free, released in 2012.``
