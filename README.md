@@ -1,6 +1,6 @@
 # Game Development Notes
 
-📄 Notes for game development focusing on free and open source solutions. Last updated on **4th Sept. 2018**.
+📄 Notes for game development focusing on free and open source solutions. Last updated on **6th Sept. 2018**.
 
 ### Table of contents
 
@@ -63,11 +63,12 @@
 
 ### Music Software
 
+- [Bosca Ceoil](https://boscaceoil.net/) ``A free, easy to use tool to create music.``
 - [FamiTracker](http://famitracker.com/)
   ``FamiTracker is a free windows tracker for producing music for the NES/Famicom-systems.``
+- [Little Sound Dj](https://www.littlesounddj.com/) ``Music program for Game Boy and Game Boy Color.``
 - [MilkyTracker](https://milkytracker.titandemo.org/)
   ``MilkyTracker is an open source, multi-platform music application for creating .MOD and .XM module files.``
-- [Little Sound Dj](https://www.littlesounddj.com/) ``Music program for Game Boy and Game Boy Color.``
 
 ### Sfx Software
 
