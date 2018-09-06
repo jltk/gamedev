@@ -16,8 +16,8 @@
     - [Sound Asset Bundles](#sound-asset-bundles)
 - [Game Sources on GitHub](#game-sources-on-github)
 - [Free Courses](#free-courses)
-- [Useful links](#useful-links)
 - [Free eBooks](#free-ebooks)
+- [Informative](#informative)
 
 ---
 
@@ -105,13 +105,14 @@
 - https://www.udacity.com/course/html5-game-development--cs255
   ``HTML5 Game Development course by  Google.``
 
-## Useful links
-- https://github.com/miloyip/game-programmer
-  ``A Study Path for Game Programmer.``
-
 ## Free eBooks
 
 - http://m.amazonappservices.com/de-Competitive-Mobile-Gaming-eBook [german]
+
+## Informative
+
+- https://github.com/miloyip/game-programmer
+  ``A Study Path for Game Programmer.``
 
 <center>
 <br>🌱<br>
