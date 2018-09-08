@@ -10,10 +10,11 @@
 - [Graphics](#graphics)
     - [2D Drawing](#2d-drawing)
     - [3D Modeling](#3d-modeling)
+    - [Free Graphic Asset Bundles](#free-graphic-asset-bundles)
 - [Audio](#audio)
     - [Music Software](#music-software)
     - [Sfx Software](#sfx-software)
-    - [Sound Asset Bundles](#sound-asset-bundles)
+    - [Free Sound Asset Bundles](#free-sound-asset-bundles)
 - [Game Sources on GitHub](#game-sources-on-github)
 - [Free Courses](#free-courses)
 - [Free eBooks](#free-ebooks)
@@ -56,6 +57,10 @@
 
 - [Blender](https://www.blender.org/)
   ``Free and Open 3D Creation Software.``
+  
+### Free Graphic Asset Bundles
+
+- [Kenney](https://kenney.nl/) ``Over 40,000 images, audio files and 3D models for you to use in your projects. ``
 
 ---
 
@@ -75,7 +80,7 @@
 - [Bfxr](https://www.bfxr.net/)
   ``Bfxr is an elaboration of Sfxr, to make sound effects for computer games.``
 
-### Sound Asset Bundles
+### Free Sound Asset Bundles
 
 - https://sonniss.com/gameaudiogdc18/
   ``30GB+ of sound effects for games, movies and interactive projects.``
