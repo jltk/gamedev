@@ -1,6 +1,6 @@
 # Game Development Notes
 
-📄 Notes for game development focusing on free and open source solutions. Last updated on **6th Sept. 2018**.
+📄 Handpicked open-source game development resources.
 
 ### Table of contents
 
@@ -79,6 +79,7 @@
 
 - [Bfxr](https://www.bfxr.net/)
   ``Bfxr is an elaboration of Sfxr, to make sound effects for computer games.``
+- [ChipTone](http://sfbgames.com/chiptone/) ``Flash based online SFX generator.``
 
 ### Free Sound Asset Bundles
 
