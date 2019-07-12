@@ -52,6 +52,7 @@
 - [Grafx2](http://grafx2.chez.com/)
   ``Bitmap paint program inspired by the Amiga programs ​Deluxe Paint and Brilliance. Specialized in 256-color drawing.``
 - [Krita](https://krita.org/) ``Free and open source painting program.``
+- [Photopea](https://www.photopea.com/) ``Online Photoshop clone.``
 
 ### 3D Modeling
 
