@@ -124,8 +124,3 @@
 
 - https://github.com/miloyip/game-programmer
   ``A Study Path for Game Programmer.``
-
-<center>
-<br>🌱<br>
-<a href="https://twitter.com/jeltk">@jeltk</a>
-</center>
