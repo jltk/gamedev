@@ -1,4 +1,4 @@
-# Game Development Notes
+# :video_game: Game Development Resources
 
 Handpicked open-source game development resources.
 
