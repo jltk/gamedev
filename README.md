@@ -30,7 +30,6 @@ Handpicked open-source game development resources.
 
 ### Frameworks
 - [ImpactJS](https://impactjs.com/) ``JavaScript Engine to develop HTML5 Games for desktop and mobile browsers.``
-- [KiwiJS](http://www.kiwijs.org/) ``Kiwi.js is a mobile first HTML5 and Javascript game engine supporting both Canvas and WebGL rendering.``
 - [LÖVE](https://love2d.org/) ``Lua based framework to make 2D games.``
 - [MelonJS](http://melonjs.org/) ``JavaScript HTML5 framework designed from the ground up to provide a true plugin-free 'write-once, run-everywhere' gaming platform.``
 - [Phaser](https://phaser.io) ``JavaScript mobile framework with arcade and p2.js physics supporting both Canvas and WebGL rendering.``
