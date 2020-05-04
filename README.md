@@ -93,6 +93,7 @@ Handpicked open-source game development resources.
 ## Game Jams
 - [Game Jams on itch.io](https://itch.io/jams)
 - [Game Jams on gamejolt.com](http://jams.gamejolt.com/)
+- [4:44 Rule by Rami Ismail](https://www.youtube.com/watch?v=lPyYZjCQ0Is)
 
 ## Game Development Blogs
 - [Gaffer On Games](https://gafferongames.com/) ``Articles about networking and physics.``
