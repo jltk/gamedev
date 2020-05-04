@@ -103,6 +103,7 @@ Handpicked open-source game development resources.
 ### Selected Reading
 - [Development and Deployment of Multiplayer Online Games: from social games to MMOFPS, with stock exchanges in between](http://ithare.com/contents-of-development-and-deployment-of-massively-multiplayer-games-from-social-games-to-mmofps-with-stock-exchanges-in-between/) [2015]
 - [Game Development: Harder Than You Think](https://queue.acm.org/detail.cfm?id=971590) [2004]
+- [How To Make A Great Puzzle Game](https://thepuzzle.press/how-to-make-a-great-puzzle-game/) [2019]
 - [Prototyping: You’re (Probably) Doing It Wrong](http://gamesfromwithin.com/prototyping-youre-probably-doing-it-wrong) [2010]
 - [Visualizing the Creative Process](https://lostgarden.home.blog/2010/08/17/visualizing-the-creative-process/) [2010]
 - [What Every Programmer Needs To Know About Game Networking](https://gafferongames.com/post/what_every_programmer_needs_to_know_about_game_networking/) [2010]
