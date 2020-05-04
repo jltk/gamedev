@@ -36,8 +36,6 @@ Handpicked open-source game development resources.
 - [Phaser](https://phaser.io) ``JavaScript mobile framework with arcade and p2.js physics supporting both Canvas and WebGL rendering.``
 - [PixiJS](http://www.pixijs.com/) ``JavaScript HTML5 Creation Engine using 2D WebGL rendering.``
 
----
-
 ## Graphics
 
 ### 2D Drawing
@@ -52,8 +50,6 @@ Handpicked open-source game development resources.
   
 ### Free Graphic Asset Bundles
 - [Kenney](https://kenney.nl/) ``Over 40,000 images, audio files and 3D models for you to use in your projects. ``
-
----
 
 ## Audio
 
@@ -78,8 +74,6 @@ Handpicked open-source game development resources.
 - https://sonniss.com/gameaudiogdc2016/
   ``16GB+ of high-quality sound effects from many of the best sound recordists and designers in the world.``
 
----
-
 ## Game Sources
 
 ### Collection on Archive.org
@@ -97,13 +91,9 @@ Handpicked open-source game development resources.
 - [SimCity](https://github.com/simhacker/micropolis)
 - [Wolfenstein 3D](https://github.com/id-Software/wolf3d)
 
----
-
 ## Game Jams
 - [Game Jams on itch.io](https://itch.io/jams)
 - [Game Jams on gamejolt.com](http://jams.gamejolt.com/)
-
----
 
 ## Game Development Blogs
 - [Gaffer On Games](https://gafferongames.com/) ``Articles about networking and physics.``
@@ -113,6 +103,9 @@ Handpicked open-source game development resources.
 ### Selected Reading
 - [Development and Deployment of Multiplayer Online Games: from social games to MMOFPS, with stock exchanges in between](http://ithare.com/contents-of-development-and-deployment-of-massively-multiplayer-games-from-social-games-to-mmofps-with-stock-exchanges-in-between/) [2015]
 - [Game Development: Harder Than You Think](https://queue.acm.org/detail.cfm?id=971590) [2004]
+- [Prototyping: You’re (Probably) Doing It Wrong](http://gamesfromwithin.com/prototyping-youre-probably-doing-it-wrong) [2010]
+- [Visualizing the Creative Process](https://lostgarden.home.blog/2010/08/17/visualizing-the-creative-process/) [2010]
+- [What Every Programmer Needs To Know About Game Networking](https://gafferongames.com/post/what_every_programmer_needs_to_know_about_game_networking/) [2010]
 
 ## Free Courses
 - [JavaScript Game Development courses on Khan Academy](https://www.khanacademy.org/computing/cs/programming-games-visualizations)
@@ -124,4 +117,5 @@ Handpicked open-source game development resources.
 
 ## Awesome Lists
 - [Awesome Game Boy Development](https://github.com/gbdev/awesome-gbdev)
+- [Awesome Game Dev](https://github.com/mbrukman/awesome-gamedev)
 - [Study Path for Game Programmer](https://github.com/miloyip/game-programmer)
