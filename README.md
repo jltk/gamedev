@@ -51,7 +51,7 @@ Handpicked open-source game development resources.
 - [OpenGameArt](https://opengameart.org/) ``Huge asset library for game developers.``
 - [Kenney](https://kenney.nl/) ``Over 40,000 images, audio files and 3D models to use in your projects. ``
 
-## Fonts
+### Fonts
 - [Font Library](https://fontlibrary.org/) ``Collection of Open Font License fonts.``
 - [Google Fonts](https://www.google.com/fonts) ``Collection of OFL fonts.``
 
