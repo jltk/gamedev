@@ -57,6 +57,9 @@ Handpicked open-source game development resources.
 
 ## Audio
 
+### Editor
+- [AudioMass](https://audiomass.co/) ``Free, open source, web-based Audio and Waveform editor``
+
 ### Music
 - [Ardour](https://ardour.org/) ``DAW-like audio workstation.``
 - [Bosca Ceoil](https://boscaceoil.net/) ``Tool to create retro game music.``
